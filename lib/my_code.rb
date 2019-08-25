@@ -32,7 +32,7 @@ def reduce(array, starting_point = nil)
         i = 1
     end
 
-    while i < array.length do 
+    while i < array.length do
         reduction = yield (array[i], reduction)
         i += 1
     end
