@@ -28,12 +28,13 @@ def reduce(array, starting_point = 0)
     total = starting_point
 
     while i < array.length do
-        if array[i]
+        if !array[i]
             return false
             i += 1
         else
             total = yield(array[i], total)
             i += 1
+        end
     end
     return total
 end
