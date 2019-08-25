@@ -23,17 +23,17 @@ end
 #     return total
 # end
 
-# def reduce(array, starting_point = 0)
-#     i = 0
-#     total = starting_point
+def reduce(array, starting_point = 0)
+    i = 0
+    total = starting_point
 
-#     while i < array.length do
-#         if !array[i]
-#             return false
-#             i += 1
-#         else
-#             total = yield(array[i], total)
-#             i += 1
-#     end
-#     return total
-# end
+    while i < array.length do
+        if !array[i]
+            return false
+            i += 1
+        else
+            total = yield(array[i], total)
+            i += 1
+    end
+    return total
+end
